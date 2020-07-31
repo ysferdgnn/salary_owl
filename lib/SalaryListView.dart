@@ -14,8 +14,9 @@ class SalaryListView extends StatefulWidget {
 class _SalaryListViewState extends State<SalaryListView> {
   @override
   Widget build(BuildContext context) {
-    List<Salary> salaryList=[Salary("test1",10,"2020/07/31"),Salary("test2",20,"2020/07/11"),Salary("test3",15,"2020/07/01")];
-    List<Period> periodList =[Period("202003",salaryList),Period("202004",salaryList)];
+    List<Salary> salaryList=[Salary("Haziran banka",1016.71,"2020/07/07"),Salary("İşkur Banka",623.07,"2020/07/09"),Salary("Nakit",1000,"2020/07/06")];
+    List<Salary> salaryList2=[Salary("Nakit",1500,"2020/07/30"),Salary("Temmuz Banka",561.06,"2020/07/30")];
+    List<Period> periodList =[Period("202006",salaryList),Period("202007",salaryList2)];
 
 
 
