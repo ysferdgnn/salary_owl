@@ -18,8 +18,12 @@ class _SalaryExpansionTileState extends State<SalaryExpansionTile> {
 
   @override
   Widget build(BuildContext context) {
+  List<Salary> salaryList2=[
+    Salary("Haziran banka","2020/07/07",1016.71,1),Salary("İşkur Banka","2020/07/09",623.07,1),Salary("Nakit","2020/07/06",1000,1),
+    Salary("Nakit","2020/07/30",1500,2),Salary("Temmuz Banka","2020/07/30",561.06,2)
+  ];
 
-    List<Salary> salaryList = widget.period.salaryChild;
+    List<Salary> salaryList = salaryList2.where((element) => element.periodId==widget.period.periodId).toList();
     double total= salaryList.map((e) => e.salary).reduce((value, element) => value+element);
     return ExpansionTile(
       title: ListTile(
