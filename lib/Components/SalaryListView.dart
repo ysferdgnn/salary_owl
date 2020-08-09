@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:salary_owl/Period.dart';
-import 'package:salary_owl/SalaryExpansionTile.dart';
+import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/models/Period.dart';
+import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/Components/SalaryExpansionTile.dart';
 
 class SalaryListView extends StatefulWidget {
   @override

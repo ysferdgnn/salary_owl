@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:salary_owl/Period.dart';
-import 'package:salary_owl/Salary.dart';
+import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/models/Period.dart';
+import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/models/Salary.dart';
+import 'package:salary_owl/Helpers/dbHelper.dart';
 
 
 class SalaryExpansionTile extends StatefulWidget {
@@ -18,6 +19,8 @@ class _SalaryExpansionTileState extends State<SalaryExpansionTile> {
 
   @override
   Widget build(BuildContext context) {
+    DbHelper helper = DbHelper();
+    helper.getDatabase();
   List<Salary> salaryList2=[
     Salary("Haziran banka","2020/07/07",1016.71,1),Salary("İşkur Banka","2020/07/09",623.07,1),Salary("Nakit","2020/07/06",1000,1),
     Salary("Nakit","2020/07/30",1500,2),Salary("Temmuz Banka","2020/07/30",561.06,2)

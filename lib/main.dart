@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:salary_owl/SalaryExpansionTile.dart';
-import 'package:salary_owl/SalaryListView.dart';
+import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/Components/SalaryExpansionTile.dart';
+import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/Components/SalaryListView.dart';
 
 void main() {
   runApp(MaterialApp(
