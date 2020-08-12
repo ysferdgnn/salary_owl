@@ -20,7 +20,10 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text("Salary Owl"),
         ),
-      body: SalaryListView()
+      body: SalaryListView(),
+        floatingActionButton: FloatingActionButton(
+        onPressed: null,
+    ),
     );
   }
 }
