@@ -24,9 +24,10 @@ class Salary {
     if(map['salaryId']!=null){
       this.salaryId=map['salaryId'];
     }
+    String salaryInMap=map['salary']==null ? "0" : map['salary'].toString();
     this.source=map['source'];
     this.date=map['date'];
-    this.salary=map['salary'];
+    this.salary=double.parse(salaryInMap);
     this.periodId=map['periodId'];
   }
 

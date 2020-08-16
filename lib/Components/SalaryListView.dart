@@ -1,7 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/models/Period.dart';
-import 'file:///C:/Users/ysfer/AndroidStudioProjects/salary_owl/lib/Components/SalaryExpansionTile.dart';
+import 'package:salary_owl/Models/Period.dart';
+
+
+import 'package:salary_owl/Services/PeriodService.dart';
+
+import 'SalaryExpansionTile.dart';
 
 class SalaryListView extends StatefulWidget {
   @override
@@ -9,21 +13,27 @@ class SalaryListView extends StatefulWidget {
 }
 
 class _SalaryListViewState extends State<SalaryListView> {
+
+  List<Period> periodList;
+
   @override
   Widget build(BuildContext context) {
    // List<Salary> salaryList=[Salary("Haziran banka",1016.71,"2020/07/07"),Salary("İşkur Banka",623.07,"2020/07/09"),Salary("Nakit",1000,"2020/07/06")];
    // List<Salary> salaryList2=[Salary("Nakit",1500,"2020/07/30"),Salary("Temmuz Banka",561.06,"2020/07/30")];
-    List<Period> periodList =[Period.withId(1,"202006"),Period.withId(2,"202007")];
+    //List<Period> periodList =[Period.withId(1,"202006"),Period.withId(2,"202007")];
 
-
-
-
-
+    PeriodService ps = PeriodService();
+    ps.selectPeriods().then((value) {
+      setState(() {
+        periodList=value.toList();
+      });
+    });
     return ListView.builder(
-        itemCount: periodList.length,
+        itemCount:  periodList==null ? 0 :periodList.length,
         itemBuilder: (context, index) =>
             SalaryExpansionTile(periodList[index])
 
       );
   }
+
 }

@@ -21,6 +21,12 @@ class Period{
 
   }
 
+
+  @override
+  String toString() {
+    return 'Period{_periodId: $_periodId, _title: $_title}';
+  }
+
   String get title => _title;
 
   set title(String value) {
