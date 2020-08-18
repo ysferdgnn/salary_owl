@@ -47,7 +47,7 @@ class _SalaryExpansionTileState extends State<SalaryExpansionTile> {
     MediaQueryData mqd=MediaQuery.of(context);
     double width = mqd.size.width;
 
-
+   
 
     double total= 0;//salaryList==null? 0: salaryList.map((e) => e.salary).reduce((value, element) => value+element);
     return ExpansionTile(
