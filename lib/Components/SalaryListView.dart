@@ -18,9 +18,7 @@ class _SalaryListViewState extends State<SalaryListView> {
 
   @override
   Widget build(BuildContext context) {
-   // List<Salary> salaryList=[Salary("Haziran banka",1016.71,"2020/07/07"),Salary("İşkur Banka",623.07,"2020/07/09"),Salary("Nakit",1000,"2020/07/06")];
-   // List<Salary> salaryList2=[Salary("Nakit",1500,"2020/07/30"),Salary("Temmuz Banka",561.06,"2020/07/30")];
-    //List<Period> periodList =[Period.withId(1,"202006"),Period.withId(2,"202007")];
+
 
     PeriodService ps = PeriodService();
     ps.selectPeriods().then((value) {
@@ -31,7 +29,7 @@ class _SalaryListViewState extends State<SalaryListView> {
     return ListView.builder(
         itemCount:  periodList==null ? 0 :periodList.length,
         itemBuilder: (context, index) =>
-            SalaryExpansionTile(periodList[index])
+            SalaryExpansionTile(periodList==null ? Period("") :periodList[index])
 
       );
   }
